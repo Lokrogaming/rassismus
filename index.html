@@ -82,9 +82,39 @@
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
+     .pochen-banner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  animation: pochen 1.5s infinite;
+  box-shadow: 0 0 10px red;
+  z-index: 1000;
+}
+
+@keyframes pochen {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px red;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+  }
+}
+
 </style>
 </head>
 <body>
+     <div id="pochen-banner" class="pochen-banner" style="display: none;">
+  8. Mai: Ende des Zweiten Weltkrieges!
+</div>
+
      <p>Von</p><button class="button" style="background-color:yellow" onclick="window.location.href='https://lokrogaming.github.io/about.html'">Erik Demoulin</button>
    <div id="overlay">
      <!-- Elfsight Poll | Untitled Poll -->
@@ -92,6 +122,8 @@
 <div class="elfsight-app-5a0268a6-e359-46b5-b1fc-ba9bb7f9db44" data-elfsight-app-lazy></div><br><br>
         <button class="close" onclick="off()">Schließen</button>
    </div>
+     
+
 
      <button class="button" onclick="whatsappshare()">Per WhatsApp empfehlen</button>
      <button class="button" onclick="whatsappfeedback()">Feedback an den Ersteller</button>
@@ -207,6 +239,15 @@
 function off() {
   document.getElementById("overlay").style.display = "none";
 }
+
+  const heute = new Date();
+  const tag = heute.getDate();
+  const monat = heute.getMonth(); // 0 = Januar, 4 = Mai
+
+  if (monat === 4 && (tag === 7 || tag === 8 || tag === 9)) {
+    document.getElementById("pochen-banner").style.display = "block";
+  }
 </script>
+
 </body>
 </html>
