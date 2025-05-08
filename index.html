@@ -51,10 +51,28 @@
         .button:hover {
             background-color: rgba(29, 185, 84, 0.1); 
      }
+     #overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
 </style>
 </head>
 <body>
      <p>Von</p><button class="button" style="background-color:yellow" onclick="window.location.href='https://lokrogaming.github.io/about.html'">Erik Demoulin</button>
+   <div id="overlay">
+     <!-- Elfsight Poll | Untitled Poll -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-5a0268a6-e359-46b5-b1fc-ba9bb7f9db44" data-elfsight-app-lazy></div>
+   </div>
 
      <button class="button" onclick="whatsappshare()">Per WhatsApp empfehlen</button>
      <button class="button" onclick="whatsappfeedback()">Feedback an den Ersteller</button>
@@ -153,6 +171,7 @@
      <a href="aggertal-gymnasium.de">Sponsor</a>
      
 <script>
+     window.onload = on()
      function openLink(url) {
         window.open(url, '_blank');
      }
@@ -162,6 +181,13 @@
      function whatsappfeedback() {
           window.open("https://wa.me/49015172973232?text=Feedback:", '_blank');
      }
+     function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
 </script>
 </body>
 </html>
