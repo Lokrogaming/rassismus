@@ -48,6 +48,19 @@
             align-items: center;
             justify-content: center;
         }
+    #overlay button.close {
+          background-color: red;
+            border: 2px solid #1DB954; 
+            border-radius: 12px;
+            color: #A0A0A0; 
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .button:hover {
             background-color: rgba(29, 185, 84, 0.1); 
      }
@@ -71,7 +84,8 @@
    <div id="overlay">
      <!-- Elfsight Poll | Untitled Poll -->
 <script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-5a0268a6-e359-46b5-b1fc-ba9bb7f9db44" data-elfsight-app-lazy></div>
+<div class="elfsight-app-5a0268a6-e359-46b5-b1fc-ba9bb7f9db44" data-elfsight-app-lazy></div><br><br>
+        <button class="close" onclick="off()">Schließen</button>
    </div>
 
      <button class="button" onclick="whatsappshare()">Per WhatsApp empfehlen</button>
