@@ -52,9 +52,6 @@
             justify-content: center;
         }
     #overlay button.close {
-          background-color: red;
-            border: 2px solid #1DB954; 
-            border-radius: 12px;
             color: #A0A0A0; 
             font-size: 18px;
             padding: 15px 30px;
@@ -69,12 +66,6 @@
         .button:hover {
             background-color: rgba(29, 185, 84, 0.1); 
      }
-     .overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
      #overlay {
   position: fixed; /* Sit on top of the page content */
   display: none; /* Hidden by default */
@@ -123,7 +114,7 @@
 
      <p>Von</p><button class="button" style="background-color:yellow" onclick="window.location.href='https://lokrogaming.github.io/about.html'">Erik Demoulin</button>
    <div id="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="off()">&times;</a>
+        <button class="close" onclick="off()">&times;</button>
      <!-- Elfsight Poll | Untitled Poll -->
 <script src="https://static.elfsight.com/platform/platform.js" async></script>
 <div class="elfsight-app-5a0268a6-e359-46b5-b1fc-ba9bb7f9db44" data-elfsight-app-lazy></div><br><br>
